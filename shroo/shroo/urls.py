@@ -1,14 +1,27 @@
-from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from rest_framework.routers import DefaultRouter
+from . import views
+
+# Create router for API endpoints
+router = DefaultRouter()
+# Future ViewSets will be registered here
+# Example: router.register(r'items', ItemViewSet)
+
+app_name = 'core'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('core.urls')),
-]
+    # Router URLs
+    path('', include(router.urls)),
 
-# Serve media files in development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # Health check
+    path('health/', views.health_check, name='health_check'),
+
+    # Authentication endpoints
+    path('auth/register/', views.register, name='register'),
+    path('auth/login/', views.CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/refresh/', views.CustomTokenRefreshView.as_view(), name='token_refresh'),
+
+    # User endpoints
+    path('users/me/', views.current_user, name='current_user'),
+    path('users/me/update/', views.update_profile, name='update_profile'),
+]
