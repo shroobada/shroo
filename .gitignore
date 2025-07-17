@@ -1,0 +1,93 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django stuff:
+*.log
+db.sqlite3
+local_settings.py  # If you use this pattern for local overrides
+media/
+staticfiles/
+static_cdn/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Translations
+*.mo
+*.pot
+
+# IDE/editor configs
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+.DS_Store
+*.swp
+*~
+
+# === Node / Vue.js ===
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/coverage/
+
+# Local environment settings
+.env
+.env.*   # If you use dotenv for either Django or Vue
+
+# Optional: Ignore frontend lock files (customize if needed)
+# package-lock.json
+# yarn.lock
+
+# Build generated
+/build/
+*.local
+
+# === Other ===
+*.pid
+
+# If you use docker-compose or other tools:
+docker-compose.override.yml
+
+# If using editorconfig
+.editorconfig
