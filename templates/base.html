@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,8 @@
     <script src="https://unpkg.com/@primeuix/themes/umd/aura.js"></script>
 
     {% block content %} {% endblock %}
-
+    <div id="app"></div>
+      <script type="module" src={% static  "js/base.js" %}></script>
     <script>
     {% block extra_js %}{% endblock %}
     </script>
