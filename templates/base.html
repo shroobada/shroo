@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Shroo</title>
+
+    <!-- PrimeIcons -->
+    <link href="https://unpkg.com/primeicons@7.0.0/primeicons.css" rel="stylesheet">
+    <!-- PrimeFlex -->
+    <link href="https://unpkg.com/primeflex@4.0.0/primeflex.css" rel="stylesheet">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- PrimeVue 4.3.6 Core -->
+    <script src="https://unpkg.com/primevue@4.3.6/umd/primevue.min.js"></script>
+    <!-- Aura Theme -->
+    <script src="https://unpkg.com/@primeuix/themes/umd/aura.js"></script>
+
+    {% block content %} {% endblock %}
+
+    <script>
+    {% block extra_js %}{% endblock %}
+    </script>
+</body>
+</html>
