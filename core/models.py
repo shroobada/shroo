@@ -58,3 +58,19 @@ class UserPreferences(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.theme_mode} theme"
+
+
+class MenuItem(models.Model):
+    label = models.CharField(max_length=100)
+    icon = models.CharField(max_length=50, blank=True, null=True)
+    to = models.CharField(max_length=200, blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='items')
+    order = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['order', 'label']
+
+    def __str__(self):
+        return self.label
