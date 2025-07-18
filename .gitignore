@@ -91,3 +91,19 @@ docker-compose.override.yml
 
 # If using editorconfig
 .editorconfig
+
+
+node_modules
+coverage
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+.idea
+.eslintcache
+api-generator/typedoc.json
+**/.DS_Store

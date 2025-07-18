@@ -12,15 +12,28 @@
     <!-- PrimeFlex -->
     <link href="https://unpkg.com/primeflex@4.0.0/primeflex.css" rel="stylesheet">
 
+    <script type="importmap">
+    {
+        "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js",
+            "@primeuix/themes/aura": "https://unpkg.com/@primeuix/themes@1.2.1/umd/aura.js",
+            "primevue": "https://unpkg.com/primevue@4.3.6/umd/primevue.min.js"
+        }
+    }
+
+    </script>
+
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Vue 3 -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+{#    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>#}
     <!-- PrimeVue 4.3.6 Core -->
     <script src="https://unpkg.com/primevue@4.3.6/umd/primevue.min.js"></script>
     <!-- Aura Theme -->
-    <script src="https://unpkg.com/@primeuix/themes/umd/aura.js"></script>
+{#    <script src="https://unpkg.com/@primeuix/themes/umd/aura.js"></script>#}
+
+
 
     {% block content %} {% endblock %}
     <div id="app"></div>
