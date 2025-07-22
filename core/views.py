@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from .models import MenuItem
 from .serializers import MenuItemSerializer
 import json
+from django.http import HttpResponseNotAllowed
 
 
 def index(request):
@@ -30,3 +31,6 @@ def index(request):
 class MenuItemListView(generics.ListAPIView):
     queryset = MenuItem.objects.filter(parent=None, is_active=True)
     serializer_class = MenuItemSerializer
+
+    def post(self, request, *args, **kwargs):
+        return HttpResponseNotAllowed(['GET'])

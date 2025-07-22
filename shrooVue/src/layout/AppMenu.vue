@@ -6,7 +6,6 @@ const model = ref([{ label: 'skeleton' }]);
 const loading = ref(true);
 const apiBaseUrl = import.meta.env.SHROO_API_BASE_URL || 'http://localhost:80';
 
-
 const fetchMenuItems = async () => {
     try {
         const response = await fetch(`${apiBaseUrl}/api/menu/`);
