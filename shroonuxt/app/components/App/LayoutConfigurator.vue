@@ -5,8 +5,9 @@ import Aura from '@primeuix/themes/aura';
 import Lara from '@primeuix/themes/lara';
 import Nora from '@primeuix/themes/nora';
 import { ref } from 'vue';
+import Layout from "~/composables/layout.js";
 
-const { layoutConfig, isDarkTheme } = useLayout();
+const { layoutConfig, isDarkTheme } = Layout();
 
 const presets = {
     Aura,
