@@ -15,16 +15,16 @@ export default defineNuxtConfig({
   routeRules: {
     '/api/**': {
       cors: true,
-      proxy: {
-        to: process.env.NUXT_PROXY_TARGET || 'http://localhost:8000',
-        pathRewrite:
-          {
-            '^/api/':
-              ''
-          },
-        changeOrigin: true,
-        secure: (process.env.NUXT_PROXY_SECURE || 'false') === 'true'
-      }
+      // proxy: {
+      //   to: process.env.NUXT_PROXY_TARGET || 'http://localhost:8000',
+      //   pathRewrite:
+      //     {
+      //       '^/api/':
+      //         ''
+      //     },
+      //   changeOrigin: true,
+      //   secure: (process.env.NUXT_PROXY_SECURE || 'false') === 'true'
+      // }
     }
   },
 
