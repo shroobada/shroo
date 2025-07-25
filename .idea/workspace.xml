@@ -4,11 +4,136 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4211b30-69e7-483c-a86e-871de830b549" name="Changes" comment="" />
+    <list default="true" id="c4211b30-69e7-483c-a86e-871de830b549" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shroo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shroo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/.npmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/NotificationsSlideover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/NotificationsSlideover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/TeamsMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/TeamsMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/UserMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/UserMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/customers/AddModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/customers/AddModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/customers/DeleteModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/customers/DeleteModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeChart.client.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeChart.client.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeChart.server.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeChart.server.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeDateRangePicker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeDateRangePicker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomePeriodSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomePeriodSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeSales.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeStats.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/home/HomeStats.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/inbox/InboxList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/inbox/InboxList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/inbox/InboxMail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/inbox/InboxMail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/components/settings/MembersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/components/settings/MembersList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/composables/useDashboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/composables/useDashboard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/error.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/customers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/inbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/inbox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/settings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/settings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/members.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/members.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/notifications.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/notifications.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/pages/settings/security.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/app/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/app/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/renovate.json" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/renovate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/server/api/customers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/server/api/customers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/server/api/mails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/server/api/mails.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/server/api/members.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/server/api/members.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/server/api/notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/server/api/notifications.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard-temp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard-temp/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/migrations/0002_menuitem.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/migrations/0002_menuitem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/db/compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/db/compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/netb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/netb/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/netb/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/netb/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/netb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/netb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/netb/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/netb/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/netb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/netb/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/shroo/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/shroo/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/shroo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/shroo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/shroo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/shroo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/shroo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/shroo/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shroo/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/.npmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/NotificationsSlideover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/NotificationsSlideover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/TeamsMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/TeamsMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/UserMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/UserMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/customers/AddModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/customers/AddModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/customers/DeleteModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/customers/DeleteModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeChart.client.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeChart.client.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeChart.server.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeChart.server.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeDateRangePicker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeDateRangePicker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomePeriodSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomePeriodSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeSales.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeStats.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/home/HomeStats.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/inbox/InboxList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/inbox/InboxList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/inbox/InboxMail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/inbox/InboxMail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/components/settings/MembersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/components/settings/MembersList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/composables/useDashboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/composables/useDashboard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/error.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/customers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/inbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/inbox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/settings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/settings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/settings/members.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/settings/members.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/settings/notifications.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/settings/notifications.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/pages/settings/security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/pages/settings/security.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/app/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/app/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/pnpm-workspace.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/server/api/customers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/server/api/customers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/server/api/mails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/server/api/mails.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/server/api/members.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/server/api/members.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/server/api/notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/server/api/notifications.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shroonuxt/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/shroonuxt/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,24 +143,67 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="30KXVmoIOrCPXsWExRS44TiYhKu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/I0512064/Code/shroo/shroonuxt/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\I0512064\\Code\\shroo\\shrooVue\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Users\\I0512064\\Code\\shroo\\shroonuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\I0512064\Code\shroo\shroonuxt\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="shroo" type="Python.DjangoServer" factoryName="Django server">
+      <module name="shroo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
         <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
       </set>
     </attachedChunks>
@@ -48,7 +216,13 @@
       <option name="presentableId" value="Default" />
       <updated>1753377275580</updated>
       <workItem from="1753377277728" duration="14000" />
+      <workItem from="1753439637903" duration="2596000" />
+      <workItem from="1753445551706" duration="5190000" />
+      <workItem from="1753454298101" duration="5772000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

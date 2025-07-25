@@ -8,8 +8,23 @@ defineProps<{
 const colorMode = useColorMode()
 const appConfig = useAppConfig()
 
-const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
-const neutrals = ['slate', 'gray', 'zinc', 'neutral', 'stone']
+const code_colors = ['code-blue', 'code-light-blue', 'code-digoulass-blue', 'code-neutral', 'code-digoulass-neutral', 'code-digoulass-gold', 'code-gold']
+const base_colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
+const base_neutrals = ['slate', 'gray', 'zinc', 'neutral', 'stone']
+const code_neutrals = ['code-neutral', 'code-digoulass-neutral']
+
+const themeConfig = [
+  {
+    type: 'primary',
+    colors: [base_colors, code_colors],
+    content: { align: 'center', collisionPadding: 16 }
+  },
+  {
+    type: 'neutral',
+    colors: [base_neutrals, code_neutrals],
+    content: { align: 'end', collisionPadding: 16 }
+  }
+]
 
 const user = ref({
   name: 'Benjamin Canac',
@@ -36,113 +51,44 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'Theme',
   icon: 'i-lucide-palette',
-  children: [{
-    label: 'Primary',
+  children: themeConfig.map(({ type, colors, content }) => ({
+    label: type.charAt(0).toUpperCase() + type.slice(1),
     slot: 'chip',
-    chip: appConfig.ui.colors.primary,
-    content: {
-      align: 'center',
-      collisionPadding: 16
-    },
-    children: colors.map(color => ({
-      label: color,
-      chip: color,
-      slot: 'chip',
-      checked: appConfig.ui.colors.primary === color,
-      type: 'checkbox',
-      onSelect: (e) => {
-        e.preventDefault()
-
-        appConfig.ui.colors.primary = color
-      }
-    }))
-  }, {
-    label: 'Neutral',
-    slot: 'chip',
-    chip: appConfig.ui.colors.neutral === 'neutral' ? 'old-neutral' : appConfig.ui.colors.neutral,
-    content: {
-      align: 'end',
-      collisionPadding: 16
-    },
-    children: neutrals.map(color => ({
-      label: color,
-      chip: color === 'neutral' ? 'old-neutral' : color,
-      slot: 'chip',
-      type: 'checkbox',
-      checked: appConfig.ui.colors.neutral === color,
-      onSelect: (e) => {
-        e.preventDefault()
-
-        appConfig.ui.colors.neutral = color
-      }
-    }))
-  }]
+    chip: type === 'neutral' && appConfig.ui.colors.neutral === 'neutral'
+      ? 'old-neutral'
+      : appConfig.ui.colors[type],
+    content,
+    children: colors.flatMap(colorGroup =>
+      colorGroup.map(color => ({
+        label: color,
+        chip: color === 'neutral' && type === 'neutral' ? 'old-neutral' : color,
+        slot: 'chip',
+        type: 'checkbox',
+        checked: appConfig.ui.colors[type] === color,
+        onSelect(e) {
+          e.preventDefault()
+          appConfig.ui.colors[type] = color
+        }
+      }))
+    )
+  }))
 }, {
   label: 'Appearance',
   icon: 'i-lucide-sun-moon',
-  children: [{
-    label: 'Light',
-    icon: 'i-lucide-sun',
+  children: [
+    { mode: 'light', icon: 'i-lucide-sun' },
+    { mode: 'dark', icon: 'i-lucide-moon' },
+    { mode: 'system', icon: 'i-lucide-monitor' }
+  ].map(({ mode, icon }) => ({
+    label: mode.charAt(0).toUpperCase() + mode.slice(1),
+    icon,
     type: 'checkbox',
-    checked: colorMode.value === 'light',
-    onSelect(e: Event) {
+    checked: colorMode.value === mode,
+    onSelect(e) {
       e.preventDefault()
-
-      colorMode.preference = 'light'
+      colorMode.preference = mode
     }
-  }, {
-    label: 'Dark',
-    icon: 'i-lucide-moon',
-    type: 'checkbox',
-    checked: colorMode.value === 'dark',
-    onUpdateChecked(checked: boolean) {
-      if (checked) {
-        colorMode.preference = 'dark'
-      }
-    },
-    onSelect(e: Event) {
-      e.preventDefault()
-    }
-  }]
-}], [{
-  label: 'Templates',
-  icon: 'i-lucide-layout-template',
-  children: [{
-    label: 'Starter',
-    to: 'https://ui-pro-starter.nuxt.dev/'
-  }, {
-    label: 'Landing',
-    to: 'https://landing-template.nuxt.dev/'
-  }, {
-    label: 'Docs',
-    to: 'https://docs-template.nuxt.dev/'
-  }, {
-    label: 'SaaS',
-    to: 'https://saas-template.nuxt.dev/'
-  }, {
-    label: 'Dashboard',
-    to: 'https://dashboard-template.nuxt.dev/',
-    checked: true,
-    type: 'checkbox'
-  }, {
-    label: 'Chat',
-    to: 'https://chat-template.nuxt.dev/'
-  }]
-}], [{
-  label: 'Documentation',
-  icon: 'i-lucide-book-open',
-  to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
-  target: '_blank'
-}, {
-  label: 'GitHub repository',
-  icon: 'i-simple-icons-github',
-  to: 'https://github.com/nuxt-ui-pro/dashboard',
-  target: '_blank'
-}, {
-  label: 'Upgrade to Pro',
-  icon: 'i-lucide-rocket',
-  to: 'https://ui.nuxt.com/pro/purchase',
-  target: '_blank'
+  }))
 }], [{
   label: 'Log out',
   icon: 'i-lucide-log-out'

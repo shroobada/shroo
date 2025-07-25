@@ -15,4 +15,88 @@
   --color-green-800: #016538;
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
+
+  --color-code-blue-50: #edf1f7;
+  --color-code-blue-100: #dee6f1;
+  --color-code-blue-200: #bacbe1;
+  --color-code-blue-300: #97b3d4;
+  --color-code-blue-400: #7a9bc0;
+  --color-code-blue-500: #6784a3;
+  --color-code-blue-600: #536a84;
+  --color-code-blue-700: #415469;
+  --color-code-blue-800: #303f50;
+  --color-code-blue-900: #1e2935;
+  --color-code-blue-950: #17202a;
+
+  --color-code-light-blue-50: #eff4fc;
+  --color-code-light-blue-100: #dae6f8;
+  --color-code-light-blue-200: #b8d1f2;
+  --color-code-light-blue-300: #8dbaec;
+  --color-code-light-blue-400: #5da3e4;
+  --color-code-light-blue-500: #508dc6;
+  --color-code-light-blue-600: #4176a6;
+  --color-code-light-blue-700: #345f87;
+  --color-code-light-blue-800: #274969;
+  --color-code-light-blue-900: #1b364f;
+  --color-code-light-blue-950: #0d1f2f;
+
+  --color-code-digoulass-blue-50: #e0f0fd;
+  --color-code-digoulass-blue-100: #bee1fc;
+  --color-code-digoulass-blue-200: #67c6f9;
+  --color-code-digoulass-blue-300: #37a5d7;
+  --color-code-digoulass-blue-400: #2a84ad;
+  --color-code-digoulass-blue-500: #1e6585;
+  --color-code-digoulass-blue-600: #16516b;
+  --color-code-digoulass-blue-700: #0f3d52;
+  --color-code-digoulass-blue-800: #082b3b;
+  --color-code-digoulass-blue-900: #031a25;
+  --color-code-digoulass-blue-950: #021018;
+
+  --color-code-neutral-50: #f8f9fa;
+  --color-code-neutral-100: #f2f4f6;
+  --color-code-neutral-200: #e2e6eb;
+  --color-code-neutral-300: #d5dae2;
+  --color-code-neutral-400: #c5cdd7;
+  --color-code-neutral-500: #b8c2cf;
+  --color-code-neutral-600: #8997a9;
+  --color-code-neutral-700: #65717e;
+  --color-code-neutral-800: #424a53;
+  --color-code-neutral-900: #24282e;
+  --color-code-neutral-950: #15181c;
+
+  --color-code-digoulass-neutral-50: #f8fdff;
+  --color-code-digoulass-neutral-100: #f8fdff;
+  --color-code-digoulass-neutral-200: #f2fbff;
+  --color-code-digoulass-neutral-300: #ebf9ff;
+  --color-code-digoulass-neutral-400: #ddf5ff;
+  --color-code-digoulass-neutral-500: #d7f3ff;
+  --color-code-digoulass-neutral-600: #00caf0;
+  --color-code-digoulass-neutral-700: #0096b3;
+  --color-code-digoulass-neutral-800: #006276;
+  --color-code-digoulass-neutral-900: #00333f;
+  --color-code-digoulass-neutral-950: #001d24;
+
+  --color-code-digoulass-gold-50: #fef1e6;
+  --color-code-digoulass-gold-100: #fee4cb;
+  --color-code-digoulass-gold-200: #fdc88a;
+  --color-code-digoulass-gold-300: #f5ae2c;
+  --color-code-digoulass-gold-400: #d99a26;
+  --color-code-digoulass-gold-500: #be8620;
+  --color-code-digoulass-gold-600: #976917;
+  --color-code-digoulass-gold-700: #714e0f;
+  --color-code-digoulass-gold-800: #4d3407;
+  --color-code-digoulass-gold-900: #2d1c02;
+  --color-code-digoulass-gold-950: #1d1101;
+
+  --color-code-gold-50: #fff5ed;
+  --color-code-gold-100: #feeadb;
+  --color-code-gold-200: #fed6b2;
+  --color-code-gold-300: #fdbd73;
+  --color-code-gold-400: #f7a925;
+  --color-code-gold-500: #e29a21;
+  --color-code-gold-600: #b27818;
+  --color-code-gold-700: #84580e;
+  --color-code-gold-800: #5b3c07;
+  --color-code-gold-900: #332002;
+  --color-code-gold-950: #211301;
 }
