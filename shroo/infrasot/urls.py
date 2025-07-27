@@ -1,8 +1,8 @@
 
 from django.contrib import admin
-from django.urls import path, include  # include is used to bring in app URLs
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
-    path('devices', views.get_devices, name='devices'),
+    re_path('^devices/?.*', views.get_devices, name='devices'),
 ]

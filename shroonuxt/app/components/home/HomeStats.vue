@@ -25,26 +25,36 @@ function formatDate(date) {
   return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
 }
 
+const keyVerbose: Record<string, string> = {
+  society: 'Nom de Societe',
+  user: 'Utilisateur',
+  version: 'Version',
+  devices: 'Devices',
+  prefixes: 'Prefix',
+  vlans: 'Vlans',
+  ips: 'IP Adresses',
+  dbStatus: 'Statut BD',
+  orchStatus: 'Statut Orchestrateur',
+  scanResult: 'Resultat du Scan',
+  lastScan: 'Dernier Scan'
+}
+
 const baseStats = [{
-  title: '',
   icon: 'i-lucide-users',
   society: 'Codefect',
   user: 'Bobby',
-  vesion: '1.0'
+  version: '1.0'
 }, {
-  title: '',
   icon: 'i-lucide-server',
   devices: 0,
   prefixes: 0,
   vlans: 0,
   ips: 0
 }, {
-  title: '',
   icon: 'i-lucide-square-radical',
   dbStatus: true,
   orchStatus: true
 }, {
-  title: '',
   icon: 'i-lucide-scan-eye',
   scanResult: true,
   lastScan: formatDate(new Date())
@@ -57,7 +67,6 @@ const baseStats = [{
       v-for="(stat, index) in baseStats"
       :key="index"
       :icon="stat.icon"
-      :title="stat.title"
       orientation="vertical"
       to="/customers"
       variant="subtle"
@@ -70,8 +79,8 @@ const baseStats = [{
       class="lg:rounded-none first:rounded-l-lg last:rounded-r-lg hover:z-1"
     >
       <div v-for="([key, value]) in Object.entries(excludeTitleAndIcon(stat))" :key="key" class="flex justify-between">
-        <span class="font-medium">{{ key }} :</span>
-        <span>{{ value }}</span>
+        <span class="font-medium">{{ keyVerbose[key] }} :</span>
+        <span class="w-20">{{ value }}</span>
       </div>
     </UPageCard>
   </UPageGrid>

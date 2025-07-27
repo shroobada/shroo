@@ -322,7 +322,12 @@ class OptimizedNetBoxClient:
         """Synchronous NetBox data fetch"""
         endpoint= eval(f'self.nb.{endpoint_name}')
 
-        if filters:
+        if 'count' in endpoint_name:
+            if filters:
+                query = endpoint(**filters)
+            else:
+                query = endpoint()
+        elif filters:
             query = endpoint.filter(**filters)
         else:
             query = endpoint.all()
