@@ -13,16 +13,21 @@ const base_colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emera
 const base_neutrals = ['slate', 'gray', 'zinc', 'neutral', 'stone']
 const code_neutrals = ['code-neutral', 'code-digoulass-neutral']
 
-const themeConfig = [
+type ThemeType = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
+
+interface ThemeConfigItem {
+  type: ThemeType
+  colors: [string[], string[]]
+}
+
+const themeConfig: ThemeConfigItem[] = [
   {
     type: 'primary',
-    colors: [base_colors, code_colors],
-    content: { align: 'center', collisionPadding: 16 }
+    colors: [base_colors, code_colors]
   },
   {
     type: 'neutral',
-    colors: [base_neutrals, code_neutrals],
-    content: { align: 'end', collisionPadding: 16 }
+    colors: [base_neutrals, code_neutrals]
   }
 ]
 
@@ -35,15 +40,8 @@ const user = ref({
 })
 
 const items = computed<DropdownMenuItem[][]>(() => ([[{
-  type: 'label',
-  label: user.value.name,
-  avatar: user.value.avatar
-}], [{
   label: 'Profile',
   icon: 'i-lucide-user'
-}, {
-  label: 'Billing',
-  icon: 'i-lucide-credit-card'
 }, {
   label: 'Settings',
   icon: 'i-lucide-settings',
@@ -51,21 +49,18 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'Theme',
   icon: 'i-lucide-palette',
-  children: themeConfig.map(({ type, colors, content }) => ({
+  children: themeConfig.map(({ type, colors }) => ({
     label: type.charAt(0).toUpperCase() + type.slice(1),
     slot: 'chip',
-    chip: type === 'neutral' && appConfig.ui.colors.neutral === 'neutral'
-      ? 'old-neutral'
-      : appConfig.ui.colors[type],
-    content,
-    children: colors.flatMap(colorGroup =>
+    chip: appConfig.ui.colors[type],
+    children: colors.map(colorGroup =>
       colorGroup.map(color => ({
         label: color,
-        chip: color === 'neutral' && type === 'neutral' ? 'old-neutral' : color,
+        chip: color === 'neutral' ? 'old-neutral' : color,
         slot: 'chip',
         type: 'checkbox',
         checked: appConfig.ui.colors[type] === color,
-        onSelect(e) {
+        onSelect(e: Event) {
           e.preventDefault()
           appConfig.ui.colors[type] = color
         }
@@ -83,7 +78,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     label: mode.charAt(0).toUpperCase() + mode.slice(1),
     icon,
     type: 'checkbox',
-    checked: colorMode.value === mode,
+    checked: colorMode.preference === mode,
     onSelect(e) {
       e.preventDefault()
       colorMode.preference = mode

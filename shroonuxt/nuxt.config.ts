@@ -13,22 +13,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '/api/**': {
+    '/back/**': {
       cors: true,
-      // proxy: {
-      //   to: process.env.NUXT_PROXY_TARGET || 'http://localhost:8000',
-      //   pathRewrite:
-      //     {
-      //       '^/api/':
-      //         ''
-      //     },
-      //   changeOrigin: true,
-      //   secure: (process.env.NUXT_PROXY_SECURE || 'false') === 'true'
-      // }
+      proxy: (process.env.NUXT_PROXY_TARGET || 'http://localhost:8000') + '/**'
     }
   },
 
-  compatibilityDate: '2024-07-11',
+  compatibilityDate: '2025-07-26',
 
   eslint: {
     config: {

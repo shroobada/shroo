@@ -6,70 +6,59 @@ const props = defineProps<{
   range: Range
 }>()
 
-function formatCurrency(value: number): string {
-  return value.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0
-  })
+function excludeTitleAndIcon(obj: InputObject): InputObject {
+  const { title, icon, ...rest } = obj
+  return rest
+}
+
+function formatDate(date) {
+  const pad = (n) => n.toString().padStart(2, '0')
+
+  const year = date.getFullYear()
+  const month = pad(date.getMonth() + 1) // zero-based months
+  const day = pad(date.getDate())
+
+  const hours = pad(date.getHours())
+  const minutes = pad(date.getMinutes())
+  const seconds = pad(date.getSeconds())
+
+  return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
 }
 
 const baseStats = [{
-  title: 'Customers',
+  title: '',
   icon: 'i-lucide-users',
-  minValue: 400,
-  maxValue: 1000,
-  minVariation: -15,
-  maxVariation: 25
+  society: 'Codefect',
+  user: 'Bobby',
+  vesion: '1.0'
 }, {
-  title: 'Conversions',
-  icon: 'i-lucide-chart-pie',
-  minValue: 1000,
-  maxValue: 2000,
-  minVariation: -10,
-  maxVariation: 20
+  title: '',
+  icon: 'i-lucide-server',
+  devices: 0,
+  prefixes: 0,
+  vlans: 0,
+  ips: 0
 }, {
-  title: 'Revenue',
-  icon: 'i-lucide-circle-dollar-sign',
-  minValue: 200000,
-  maxValue: 500000,
-  minVariation: -20,
-  maxVariation: 30,
-  formatter: formatCurrency
+  title: '',
+  icon: 'i-lucide-square-radical',
+  dbStatus: true,
+  orchStatus: true
 }, {
-  title: 'Orders',
-  icon: 'i-lucide-shopping-cart',
-  minValue: 100,
-  maxValue: 300,
-  minVariation: -5,
-  maxVariation: 15
+  title: '',
+  icon: 'i-lucide-scan-eye',
+  scanResult: true,
+  lastScan: formatDate(new Date())
 }]
-
-const { data: stats } = await useAsyncData<Stat[]>('stats', async () => {
-  return baseStats.map((stat) => {
-    const value = randomInt(stat.minValue, stat.maxValue)
-    const variation = randomInt(stat.minVariation, stat.maxVariation)
-
-    return {
-      title: stat.title,
-      icon: stat.icon,
-      value: stat.formatter ? stat.formatter(value) : value,
-      variation
-    }
-  })
-}, {
-  watch: [() => props.period, () => props.range],
-  default: () => []
-})
 </script>
 
 <template>
   <UPageGrid class="lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-px">
     <UPageCard
-      v-for="(stat, index) in stats"
+      v-for="(stat, index) in baseStats"
       :key="index"
       :icon="stat.icon"
       :title="stat.title"
+      orientation="vertical"
       to="/customers"
       variant="subtle"
       :ui="{
@@ -80,18 +69,9 @@ const { data: stats } = await useAsyncData<Stat[]>('stats', async () => {
       }"
       class="lg:rounded-none first:rounded-l-lg last:rounded-r-lg hover:z-1"
     >
-      <div class="flex items-center gap-2">
-        <span class="text-2xl font-semibold text-highlighted">
-          {{ stat.value }}
-        </span>
-
-        <UBadge
-          :color="stat.variation > 0 ? 'success' : 'error'"
-          variant="subtle"
-          class="text-xs"
-        >
-          {{ stat.variation > 0 ? '+' : '' }}{{ stat.variation }}%
-        </UBadge>
+      <div v-for="([key, value]) in Object.entries(excludeTitleAndIcon(stat))" :key="key" class="flex justify-between">
+        <span class="font-medium">{{ key }} :</span>
+        <span>{{ value }}</span>
       </div>
     </UPageCard>
   </UPageGrid>
