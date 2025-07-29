@@ -246,6 +246,9 @@ def customers(request):
 
   return JsonResponse(customers, safe=False)
 
+def health(request):
+    return JsonResponse(True, safe=False)
+
 def menu_items(request):
   app_list = []
 

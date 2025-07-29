@@ -323,10 +323,11 @@ class OptimizedNetBoxClient:
         endpoint= eval(f'self.nb.{endpoint_name}')
 
         if 'count' in endpoint_name:
+
             if filters:
-                query = endpoint(**filters)
+                query = eval(f'{endpoint_name}(**filters)')
             else:
-                query = endpoint()
+                query = eval(f'self.nb.{endpoint_name}()')
         elif filters:
             query = endpoint.filter(**filters)
         else:
@@ -334,8 +335,11 @@ class OptimizedNetBoxClient:
 
         # Convert all items to dictionaries
         data = []
-        for item in query:
-            data.append(dict(item))
+        if 'count' in endpoint_name:
+            data=[query]
+        else:
+            for item in query:
+                data.append(dict(item))
 
         return data
 

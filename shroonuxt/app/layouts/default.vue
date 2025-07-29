@@ -10,10 +10,6 @@ const { data: menuData } = await useFetch<NavigationMenuItem[]>('/back/menu', {
   lazy: true
 })
 
-const { data: devices } = await useFetch<NavigationMenuItem[]>('/back/dcim/devices', {
-  lazy: true
-})
-console.log(devices.value)
 const links = computed(() => {
   if (menuData.value && Array.isArray(menuData.value)) {
     return [menuData.value] // Wrap in array for NavigationMenuItem[][]

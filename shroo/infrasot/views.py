@@ -17,6 +17,15 @@ def get_devices(request):
 
 def get_count(request):
     assert nb is not None
+    print('request:',request.path[1:].replace('/', '.'))
     count=nb.get_data_sync(request.path[1:].replace('/', '.'))
 
     return JsonResponse({"count": count})
+
+def gimme(request,*args, **kwargs):
+    pprint(kwargs)
+    pprint(args)
+    assert nb is not None
+    result=nb.get_data_sync(request.path[1:].replace('/', '.'))
+    print(result)
+    return JsonResponse({"result": result})
