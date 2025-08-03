@@ -1,22 +1,7 @@
 <script setup lang="ts">
-import {onMounted, onUnmounted} from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
-const { fetchAllCounts, checkHealthStatus } = useApi()
-
-// Labels for display
-const labels = {
-  society: 'Nom de Societe',
-  user: 'Utilisateur',
-  version: 'Version',
-  devices: 'Devices',
-  prefixes: 'Prefix',
-  vlans: 'Vlans',
-  ip_addresses: 'IP Adresses',
-  infrasoTStatus: 'Statut InfraSoT',
-  orchStatus: 'Statut Orchestrateur',
-  scanResult: 'Resultat du Scan',
-  lastScan: 'Dernier Scan'
-}
+const { safeApiFetch } = useApi()
 
 // Static data
 const info = {
@@ -48,14 +33,15 @@ const scan = {
 // Loading states
 const loading = reactive({
   infrasoTStatus: true,
-  orchStatus: true
+  orchStatus: true,
+  counts: true
 })
 
 // Check InfraSoT status
 async function checkInfraSoTStatus() {
   loading.infrasoTStatus = true
   try {
-    return await checkHealthStatus('infrasot')
+    return await safeApiFetch('health', false)
   } finally {
     loading.infrasoTStatus = false
   }
@@ -65,9 +51,28 @@ async function checkInfraSoTStatus() {
 async function checkOrchStatus() {
   loading.orchStatus = true
   try {
-    return await checkHealthStatus('orchestrator')
+    // return await checkHealthStatus('orchestrator')
+    return false
   } finally {
     loading.orchStatus = false
+  }
+}
+
+// Fetch counts using the composable
+async function loadCounts() {
+  loading.counts = true
+  try {
+    const keys = Object.keys(counts) as Array<keyof typeof counts>
+
+    for (const key of keys) {
+      // Call safeApiFetch for each key, assuming the endpoint keys match count keys
+      const result = await safeApiFetch<number[]>(key, [counts[key]], 'count')
+      counts[key] = result[0] || 0
+    }
+  } catch (error) {
+    console.error('Failed to load counts:', error)
+  } finally {
+    loading.counts = false
   }
 }
 
@@ -79,19 +84,28 @@ async function refreshStatus() {
   ])
 }
 
-// Fetch counts using the composable
-async function loadCounts() {
-  const results = await fetchAllCounts()
-  Object.assign(counts, results)
+// Refresh all data function
+async function refreshAllData() {
+  await Promise.all([
+    loadCounts(),
+    refreshStatus()
+  ])
 }
 
-// Export refresh function for parent components
-defineExpose({ refreshStatus })
+// Export refresh functions for parent components
+defineExpose({
+  refreshStatus,
+  refreshAllData,
+  loadCounts
+})
 
-// Status check and auto-refresh (client-side only)
+// Auto-refresh intervals
 let statusInterval: NodeJS.Timeout | null = null
+let countsInterval: NodeJS.Timeout | null = null
 
 onMounted(async () => {
+  await nextTick()
+
   // Load initial counts and status
   await Promise.all([
     loadCounts(),
@@ -103,12 +117,20 @@ onMounted(async () => {
   statusInterval = setInterval(async () => {
     await refreshStatus()
   }, 5000)
+
+  // Auto-refresh counts every 30 seconds (less frequent than status)
+  countsInterval = setInterval(async () => {
+    await loadCounts()
+  }, 30000)
 })
 
-// Cleanup interval on component unmount
+// Cleanup intervals on component unmount
 onUnmounted(() => {
   if (statusInterval) {
     clearInterval(statusInterval)
+  }
+  if (countsInterval) {
+    clearInterval(countsInterval)
   }
 })
 
@@ -128,7 +150,6 @@ const stats = [
       :key="index"
       :icon="stat.icon"
       orientation="vertical"
-      to="/customers"
       variant="subtle"
       :ui="{
         container: 'gap-y-1.5',
@@ -151,6 +172,12 @@ const stats = [
               :name="value ? 'i-lucide-check-check' : 'i-lucide-x'"
               :class="value ? 'text-green-500' : 'text-red-500'"
               class="h-6 w-6"
+            />
+          </template>
+          <template v-else-if="loading.counts && stat.icon === 'i-lucide-server'">
+            <UIcon
+              name="i-lucide-refresh-ccw"
+              class="h-4 w-4 text-blue-500 animate-spin"
             />
           </template>
           <template v-else>

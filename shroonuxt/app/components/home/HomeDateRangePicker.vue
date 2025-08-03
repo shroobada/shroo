@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { DateFormatter, getLocalTimeZone, CalendarDate, today } from '@internationalized/date'
 import type { Range } from '~/types'
+import {endOfDay, startOfDay, subDays} from "date-fns";
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium'
@@ -71,8 +72,8 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
   }
 
   selected.value = {
-    start: startDate.toDate(getLocalTimeZone()),
-    end: endDate.toDate(getLocalTimeZone())
+    start: startOfDay(startDate.toDate(getLocalTimeZone())),
+    end: endOfDay(endDate.toDate(getLocalTimeZone()))
   }
 }
 </script>

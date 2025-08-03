@@ -1,14 +1,33 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+const { safeApiFetch } = useApi()
 
 const toast = useToast()
 
 const open = ref(false)
 
-const { data: menuData } = await useFetch<NavigationMenuItem[]>('/back/menu', {
-  lazy: true
-})
+const menuData = ref<NavigationMenuItem[]>([])
+
+// Function to fetch and process menu data
+const fetchMenuData = async () => {
+  try {
+    const data = await safeApiFetch<NavigationMenuItem[]>('menu', [])
+
+    // Process the data
+    data.map(item =>
+      item.children?.map((child) => {
+        child.label = labels[child.label] ?? child.label
+        return child
+      })
+    )
+
+    menuData.value = data
+  } catch (error) {
+    console.error('Failed to fetch menu data:', error)
+    menuData.value = []
+  }
+}
 
 const links = computed(() => {
   if (menuData.value && Array.isArray(menuData.value)) {
@@ -24,6 +43,9 @@ const groups = computed(() => [{
 }])
 
 onMounted(async () => {
+  await nextTick()
+  await fetchMenuData()
+
   const cookie = useCookie('cookie-consent')
   if (cookie.value === 'accepted') {
     return

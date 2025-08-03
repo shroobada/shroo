@@ -23,9 +23,6 @@ def get_count(request):
     return JsonResponse({"count": count})
 
 def gimme(request,*args, **kwargs):
-    pprint(kwargs)
-    pprint(args)
     assert nb is not None
-    result=nb.get_data_sync(request.path[1:].replace('/', '.'))
-    print(result)
-    return JsonResponse({"result": result})
+    result=nb.get_data_sync(request.path[1:].replace('/', '.').rstrip('.'))
+    return JsonResponse(result, safe=False)

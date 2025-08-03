@@ -13,4 +13,5 @@
 
     <div class="h-96" />
   </UCard>
+  <HomeActivityTable data="" loading="true"/>
 </template>

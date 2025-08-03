@@ -275,10 +275,11 @@ def menu_items(request):
     app_item['children'] = []
 
     for url in app_urls:
-      app_item['children'].append({
-        'label': url.name,
-        'to': f'/{app_label}/{url.name}',
-      })
+      if url.name:
+        app_item['children'].append({
+          'label': url.name,
+          'to': f'/{app_label}/{url.name}',
+        })
 
     app_list.append(app_item)
 
