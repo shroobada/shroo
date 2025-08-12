@@ -44,7 +44,7 @@
 
     <!-- Network viewer -->
     <div v-if="mxfileContent" class="h-[600px]">
-      <MxFileNetworkViewer
+      <test
         :mxfile-content="mxfileContent"
         :physics-config="physicsConfig"
       />
@@ -102,6 +102,8 @@
 </template>
 
 <script setup>
+import Test from "~/pages/test.vue";
+
 const mxfileContent = ref('')
 
 const physicsConfig = ref({
@@ -136,7 +138,7 @@ function handleFileUpload(event) {
 
 function loadSampleDiagram() {
   // Sample mxfile content - a simple flowchart
-  const sampleMxFile = `<?xml version="1.0" encoding="UTF-8"?>
+  mxfileContent.value = `<?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net">
   <diagram>
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
@@ -201,8 +203,6 @@ function loadSampleDiagram() {
     </mxGraphModel>
   </diagram>
 </mxfile>`
-
-  mxfileContent.value = sampleMxFile
 }
 
 function clearDiagram() {

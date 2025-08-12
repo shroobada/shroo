@@ -144,7 +144,7 @@ const stats = [
 </script>
 
 <template>
-  <UPageGrid class="lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-px">
+  <UPageGrid class="lg:grid-cols-4 gap-4 ">
     <UPageCard
       v-for="(stat, index) in stats"
       :key="index"
@@ -156,7 +156,7 @@ const stats = [
         wrapper: 'items-start',
         leading: 'p-2.5 rounded-full bg-primary/10 ring ring-inset ring-primary/25 flex-col'
       }"
-      class="lg:rounded-none first:rounded-l-lg last:rounded-r-lg hover:z-1"
+      class="rounded-lg hover:z-1"
     >
       <div v-for="([key, value]) in Object.entries(stat.data)" :key="key" class="flex justify-between">
         <span class="font-medium">{{ labels[key as keyof typeof labels] }} :</span>

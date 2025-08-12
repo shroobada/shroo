@@ -1,0 +1,32 @@
+include:
+  - db/compose.yml
+
+services:
+  bfdlm-back:
+    container_name: bfdlm_back
+    restart: always
+    env_file: "../${BFDLM_BACK_LOCATION}/.env"
+    build:
+      context: ../
+      dockerfile: ${BFDLM_BACK_LOCATION}/Containerfile 
+    networks:
+      - BFDLMDB
+      - BFDLMFront
+
+  bfdlm-nginx:
+    container_name: bfdlm_nginx
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "${BFDLM_BACK_PORT}:${BFDLM_BACK_PORT}"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - BFDLMFront
+    depends_on: 
+      - bfdlm-back
+
+networks:
+  BFDLMFront:
+    driver: bridge
+ 
